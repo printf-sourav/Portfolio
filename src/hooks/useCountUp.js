@@ -2,7 +2,7 @@
  * useCountUp Hook - Animated Counter
  */
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 function useCountUp(target, duration = 2000) {
   const [count, setCount] = useState(0);
