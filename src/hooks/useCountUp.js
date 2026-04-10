@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from 'react';
 function useCountUp(target, duration = 2000) {
   const [count, setCount] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
-  const elementRef = useRef(null);
+
 
   useEffect(() => {
     // Start counting when component mounts (after loader)
