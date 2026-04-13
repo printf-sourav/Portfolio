@@ -6,6 +6,9 @@ import React from 'react';
 import useTypingEffect from '../hooks/useTypingEffect';
 import useCountUp from '../hooks/useCountUp';
 import { profile } from '../data/portfolioData';
+import miniModelImage from '../assets/mini-model.png';
+
+
 
 function Hero() {
   const typingText = useTypingEffect(profile.roles);
@@ -23,7 +26,7 @@ function Hero() {
               <h1 className="hero-title fade-in-up" style={{ animationDelay: '0.2s' }}>
                 Hi, I'm <span className="text-accent glitch" data-text={profile.name}>{profile.name}</span>
               </h1>
-              
+
               <div className="hero-subtitle fade-in-up" style={{ animationDelay: '0.4s' }}>
                 <span className="typing-text">{typingText}</span>
                 <span className="cursor">|</span>
@@ -53,6 +56,9 @@ function Hero() {
           
           <div className="col-lg-4 d-none d-lg-block">
             <div className="hero-visual fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <div className="hero-model-on-line d-flex align-items-flex-start">
+                <HeroModel src={miniModelImage} />
+              </div>
               <CodeWindow />
             </div>
           </div>
@@ -61,6 +67,14 @@ function Hero() {
       
       <ScrollIndicator />
     </section>
+  );
+}
+
+function HeroModel({ src }) {
+  return (
+    <div className="hero-model-figure" aria-hidden="true">
+      <img src={src} alt="" className="hero-model-image" />
+    </div>
   );
 }
 
@@ -87,7 +101,7 @@ function CodeWindow() {
       <pre className="code-content">
         <code>
           <span className="code-keyword">const</span> <span className="code-variable">sourav</span> = {'{'}
-          {'\n'}  <span className="code-property">name</span>: <span className="code-string">"Sourav Kumar Sahu"</span>,
+          {'\n'}  <span className="code-property">model</span>: <span className="code-string">"mini-model.png"</span>,
           {'\n'}  <span className="code-property">role</span>: <span className="code-string">"Full Stack Developer"</span>,
           {'\n'}  <span className="code-property">focus</span>: <span className="code-string">"GitHub projects & real-world apps"</span>,
           {'\n'}  <span className="code-property">coffee</span>: <span className="code-boolean">true</span>,
