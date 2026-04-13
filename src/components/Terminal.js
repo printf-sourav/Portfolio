@@ -415,7 +415,6 @@ function Terminal() {
                     onKeyDown={handleKeyDown}
                     autoComplete="off"
                     spellCheck="false"
-                    autoFocus
                   />
                 </form>
               </div>
