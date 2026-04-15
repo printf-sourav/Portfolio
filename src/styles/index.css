@@ -397,6 +397,9 @@ body {
   justify-content: center;
   margin-left: 140px;
   transform: translateY(-100px);
+  transition: transform 180ms ease-out;
+  will-change: transform;
+  cursor: none;
 }
 
 .hero-model-image {
@@ -1523,6 +1526,12 @@ textarea.custom-input {
   
   .project-title {
     font-size: 1.1rem;
+  }
+}
+
+@media (hover: none) {
+  .hero-model-figure {
+    cursor: default;
   }
 }
 

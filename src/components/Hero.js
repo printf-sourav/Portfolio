@@ -2,7 +2,7 @@
  * Hero Component - Full Screen with Typing Effect
  */
 
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import useTypingEffect from '../hooks/useTypingEffect';
 import useCountUp from '../hooks/useCountUp';
 import { profile } from '../data/portfolioData';
@@ -71,8 +71,52 @@ function Hero() {
 }
 
 function HeroModel({ src }) {
+  const figureRef = useRef(null);
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (event) => {
+    if (!figureRef.current) {
+      return;
+    }
+
+    const rect = figureRef.current.getBoundingClientRect();
+    const centerX = rect.left + (rect.width / 2);
+    const centerY = rect.top + (rect.height / 2);
+
+    const deltaX = event.clientX - centerX;
+    const deltaY = event.clientY - centerY;
+    const distance = Math.hypot(deltaX, deltaY);
+
+    const dodgeRadius = 200;
+    const maxShift = 24;
+
+    if (distance > dodgeRadius) {
+      setOffset({ x: 0, y: 0 });
+      return;
+    }
+
+    const repelStrength = (1 - (distance / dodgeRadius)) * maxShift;
+    const safeDistance = Math.max(distance, 1);
+
+    setOffset({
+      x: (-deltaX / safeDistance) * repelStrength,
+      y: (-deltaY / safeDistance) * repelStrength
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setOffset({ x: 0, y: 0 });
+  };
+
   return (
-    <div className="hero-model-figure" aria-hidden="true">
+    <div
+      ref={figureRef}
+      className="hero-model-figure"
+      style={{ transform: `translate(${offset.x}px, calc(-100px + ${offset.y}px))` }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      aria-hidden="true"
+    >
       <img src={src} alt="" className="hero-model-image" />
     </div>
   );
