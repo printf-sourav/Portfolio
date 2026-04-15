@@ -1,12 +1,11 @@
 <div align="center">
 
-# 👨‍💻 Sourav's Developer Portfolio
+#  Sourav's Developer Portfolio
 
 *A Unix-terminal inspired personal portfolio built with React to showcase projects, skills, and contact information in a clean, interactive format.*
 
 [![Live Website](https://img.shields.io/badge/Live_Website-View_Now-00C7B7?style=for-the-badge&logo=netlify)](https://printfsourav-portfolio.netlify.app)
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+
 
 </div>
 
