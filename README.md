@@ -1,30 +1,95 @@
 # Sourav Portfolio
 
-A Unix-terminal inspired personal portfolio built with React to showcase projects, skills, and contact information in a clean, interactive format.
+A modern, terminal-inspired developer portfolio crafted with React, built to present projects, skills, and personality with clean motion and interactive UI.
 
-## Live Website
+<p align="center">
+  <a href="https://printfsourav-portfolio.netlify.app"><strong>Live Website: printfsourav-portfolio.netlify.app</strong></a>
+</p>
 
-**Visit:** [printfsourav-portfolio.netlify.app](https://printfsourav-portfolio.netlify.app)
+<p align="center">
+  <a href="https://printfsourav-portfolio.netlify.app">View Demo</a>
+  |
+  <a href="https://github.com/printf-sourav">GitHub</a>
+  |
+  <a href="https://www.linkedin.com/in/sourav-kumar-sahu-ab7003209/">LinkedIn</a>
+</p>
 
-## Preview
+## Why This Portfolio Stands Out
 
-This portfolio includes:
-- A custom loading screen and animated hero area
-- Particle background effects
+- Unix terminal inspired visual style
+- Animated intro loader and smooth reveal transitions
+- Particle canvas background for depth and ambience
 - Dedicated sections for About, Skills, Projects, and Contact
-- Interactive terminal-inspired component
-- Smooth scrolling and back-to-top behavior
-- Responsive design for desktop and mobile
+- Interactive terminal block for a developer-first feel
+- Responsive layout optimized for desktop and mobile
 
 ## Tech Stack
 
-- React 18
-- JavaScript (ES6+)
-- Bootstrap 5
-- Bootstrap Icons
-- CSS3
+| Category | Tools |
+| --- | --- |
+| Frontend | React 18, JavaScript (ES6+) |
+| UI | Bootstrap 5, Bootstrap Icons |
+| Styling | CSS3 |
+| Build Tooling | Create React App (react-scripts) |
 
-## Project Structure
+## Sections Included
+
+- Loader
+- Hero
+- About
+- Skills
+- Projects
+- Terminal
+- Contact
+- Footer
+
+## Local Development
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd Portfolio
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start development server
+
+```bash
+npm start
+```
+
+App runs at: [http://localhost:3000](http://localhost:3000)
+
+## Scripts
+
+| Command | Purpose |
+| --- | --- |
+| `npm start` | Start development server |
+| `npm run build` | Build production bundle in `build/` |
+| `npm test` | Run test runner |
+| `npm run eject` | Eject CRA config (irreversible) |
+
+## Quick Customization
+
+Update personal profile details, links, and project cards:
+
+- `src/data/portfolioData.js`
+
+Main app layout and section composition:
+
+- `src/App.js`
+
+Global theme and UI styling:
+
+- `src/styles/index.css`
+
+## Folder Structure
 
 ```text
 src/
@@ -52,65 +117,20 @@ src/
   index.js
 ```
 
-## Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd Portfolio
-```
-
-### 2. Install dependencies
-
-```bash
-npm install
-```
-
-### 3. Run locally
-
-```bash
-npm start
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Available Scripts
-
-In the project directory, you can run:
-
-- `npm start` - Runs the app in development mode
-- `npm run build` - Builds the app for production in the `build` folder
-- `npm test` - Launches the test runner
-- `npm run eject` - Ejects CRA configuration (irreversible)
-
-## Customization
-
-You can update personal data, links, and project cards from:
-
-- `src/data/portfolioData.js`
-
-Primary app composition lives in:
-
-- `src/App.js`
-
-Global styling is in:
-
-- `src/styles/index.css`
-
 ## Deployment
 
-The project is production-ready and can be deployed on Netlify, Vercel, or GitHub Pages.
+This project is deployment-ready for Netlify, Vercel, or GitHub Pages.
 
-Current live deployment:
-- [printfsourav-portfolio.netlify.app](https://printfsourav-portfolio.netlify.app)
+Primary live deployment:
+
+- [https://printfsourav-portfolio.netlify.app](https://printfsourav-portfolio.netlify.app)
 
 ## Contact
 
-- GitHub: [printf-sourav](https://github.com/printf-sourav)
-- LinkedIn: [Sourav Kumar Sahu](https://www.linkedin.com/in/sourav-kumar-sahu-ab7003209/)
+- GitHub: [https://github.com/printf-sourav](https://github.com/printf-sourav)
+- LinkedIn: [https://www.linkedin.com/in/sourav-kumar-sahu-ab7003209/](https://www.linkedin.com/in/sourav-kumar-sahu-ab7003209/)
 - Email: [lcs.souravkrsahu@gmail.com](mailto:lcs.souravkrsahu@gmail.com)
 
 ---
 
-If you like this portfolio design, feel free to fork it and adapt it for your own profile.
+If this portfolio inspires you, fork it and make it your own.
